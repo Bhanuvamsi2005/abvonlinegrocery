@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './Prehome.css';
 import backgroundVideo from './Static/prehome1.mp4'; 
-import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Prehome() {
   const [text, setText] = useState('');
   const [cursor, setCursor] = useState(true);
   const fullText = 'Grocery Store';
   const [buttonHover, setButtonHover] = useState(false);
+  const navigate = useNavigate(); // ⬅️ React Router navigation hook
 
   useEffect(() => {
     let currentIndex = 0;
@@ -37,7 +37,8 @@ export default function Prehome() {
           <span className={`cursor ${cursor ? 'visible' : ''}`}>|</span>
         </h1>
         <p className="subtitle">Buy Fresh groceries delivered to your doorstep</p>
-        <button onClick={() => window.location.href = '/signup'}
+        <button
+          onClick={() => navigate('/signup')} // ✅ Proper client-side routing
           className={`get-started-btn ${buttonHover ? 'hover' : ''}`}
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}
