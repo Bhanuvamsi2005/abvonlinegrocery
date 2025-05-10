@@ -238,7 +238,7 @@ const Signup = () => {
     e.preventDefault();
     setError('');
     try {
-      await axios.post('http://localhost:8080/api/auth/signup', formData);
+      await axios.post('abvonlinegrocery-wrlk.vercel.app/api/auth/signup', formData);
       setShowSuccessPopup(true);
       // Clear form after successful submission
       setFormData({
