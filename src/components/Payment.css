@@ -1,0 +1,183 @@
+Payment wrapper styling
+.payment-wrapper {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.5s ease-in;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Payment total text */
+.payment-total {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Flex layout for method buttons */
+.method-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+/* Button styles */
+.method-buttons button,
+.submit-payment,
+.go-back,
+.paypal-button,
+.location-button {
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 123, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Hover effects */
+.method-buttons button:hover,
+.submit-payment:hover,
+.go-back:hover,
+.paypal-button:hover,
+.location-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 86, 179, 0.4);
+}
+
+/* Input field styling */
+.payment-option input {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.payment-option input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Grouped card inputs */
+.card-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.card-details input {
+  flex: 1;
+  min-width: 100px;
+}
+
+/* QR Image */
+.qr-image {
+  max-width: 240px;
+  margin: 2rem auto 1rem;
+  display: block;
+  border: 3px dashed #007bff;
+  padding: 14px;
+  border-radius: 14px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.qr-image:hover {
+  transform: scale(1.03);
+}
+
+/* Location Info */
+.location-info {
+  margin-top: 1.5rem;
+  background-color: #eef9ff;
+  padding: 14px 16px;
+  border-left: 5px solid #007bff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Thank you message */
+.thank-you {
+  color: green;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Error message styling */
+.error-message {
+  color: #d8000c;
+  background-color: #ffd2d2;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .payment-wrapper {
+    padding: 1.5rem;
+  }
+
+  .method-buttons button,
+  .submit-payment,
+  .go-back,
+  .paypal-button,
+  .location-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .card-details {
+    flex-direction: column;
+  }
+
+  .qr-image {
+    max-width: 200px;
+  }
+}
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
